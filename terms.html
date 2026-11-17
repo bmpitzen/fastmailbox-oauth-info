@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Testing terms · FastMailBox</title>
+<style>
+html{color-scheme:light dark;font:17px/1.65 system-ui,sans-serif}
+body{max-width:44rem;margin:3rem auto;padding:0 1.25rem}
+header{display:flex;align-items:center;gap:1rem}
+img{width:64px;height:64px}
+nav{display:flex;gap:1rem;flex-wrap:wrap}
+a{color:light-dark(#17613a,#80db9c)}
+h1,h2{line-height:1.2}
+footer{margin-top:3rem;border-top:1px solid;padding-top:1rem}
+</style>
+</head>
+<body>
+<header><img src="logo.svg" alt=""><h1>Testing terms</h1></header>
+<nav aria-label="Site pages">
+<a href="./">About</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html" aria-current="page">Testing terms</a>
+</nav>
+<main>
+<p>FastMailBox is maintained by <a href="https://github.com/bmpitzen">bmpitzen</a> for personal and development testing. Use it only with accounts you own or are authorized to access, and follow your mail provider's terms.</p>
+<h2>Testing responsibly</h2>
+<p>The software is under development, and its behavior and provider compatibility are still being tested. Start with disposable test accounts and synthetic mail. Check sending identities, recipients and pending work before taking mail actions.</p>
+<p>Connecting, reconnecting or launching can synchronize mail and apply queued changes when connectivity is available. Opening unread mail can mark it read. Sending, uploads and mailbox changes affect the provider account; perform them only when intended. Optional coordinator and assistant features require separate setup. Their data flows are described in the <a href="privacy.html">privacy information</a>.</p>
+<h2>Software and distribution</h2>
+<p>This information site offers no app download and grants no public distribution license for the FastMailBox software, source code or artwork. Third-party components remain subject to their applicable terms.</p>
+<h2>Stopping a test or getting help</h2>
+<p>Remove the account locally and revoke each device's grant in Fastmail's connected-app settings when access is no longer wanted. Local removal alone does not revoke that grant. Contact the maintainer through <a href="https://github.com/bmpitzen/fastmailbox-oauth-info/issues">GitHub issues</a>; issues are public, so never include credentials or private mail.</p>
+</main>
+<footer>FastMailBox · Updated <time datetime="2026-11-17">17 November 2026</time></footer>
+</body>
+</html>

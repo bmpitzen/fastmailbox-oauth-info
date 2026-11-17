@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FastMailBox</title>
+<style>
+html{color-scheme:light dark;font:17px/1.65 system-ui,sans-serif}
+body{max-width:44rem;margin:3rem auto;padding:0 1.25rem}
+header{display:flex;align-items:center;gap:1rem}
+img{width:64px;height:64px}
+nav{display:flex;gap:1rem;flex-wrap:wrap}
+a{color:light-dark(#17613a,#80db9c)}
+h1,h2{line-height:1.2}
+footer{margin-top:3rem;border-top:1px solid;padding-top:1rem}
+</style>
+</head>
+<body>
+<header><img src="logo.svg" alt=""><h1>FastMailBox</h1></header>
+<nav aria-label="Site pages">
+<a href="./" aria-current="page">About</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Testing terms</a>
+</nav>
+<main>
+<p>A native macOS and iPhone email client for personal and development testing, with explicit sending identities, local search and mailbox triage. Maintained by <a href="https://github.com/bmpitzen">bmpitzen</a>.</p>
+<p>FastMailBox is under development. These pages provide app information for Fastmail sign-in; this site offers no app download and does not handle account credentials or OAuth callbacks.</p>
+<h2>Fastmail sign-in</h2>
+<p>The installed app opens Fastmail's authorization page in the system browser. It requests access to discover your account, read and manage mail, and use sending identities and mail submission. It also requests refresh permission when required by the server. It does not request contacts or calendars. Each device authorizes separately and keeps its grant in that device's Keychain.</p>
+<h2>Basic testing</h2>
+<p>Start with a disposable test account and synthetic mail. Connecting, reconnecting or launching can start synchronization and apply previously queued changes. Check pending work before reconnecting. Sending, mailbox changes and uploads should be deliberate test actions; opening unread mail can mark it read.</p>
+<p>Optional coordinator and macOS Assistant Access features have separate setup and data flows. Read the <a href="privacy.html">privacy information</a> and <a href="terms.html">testing terms</a> before enabling them.</p>
+<h2>Support and privacy questions</h2>
+<p>Contact the maintainer through <a href="https://github.com/bmpitzen/fastmailbox-oauth-info/issues">GitHub issues</a>. Issues are public: do not include passwords, tokens, authorization codes, private addresses, mail content or attachments.</p>
+</main>
+<footer>FastMailBox · Updated <time datetime="2026-11-17">17 November 2026</time></footer>
+</body>
+</html>

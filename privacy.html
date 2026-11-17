@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy · FastMailBox</title>
+<style>
+html{color-scheme:light dark;font:17px/1.65 system-ui,sans-serif}
+body{max-width:44rem;margin:3rem auto;padding:0 1.25rem}
+header{display:flex;align-items:center;gap:1rem}
+img{width:64px;height:64px}
+nav{display:flex;gap:1rem;flex-wrap:wrap}
+a{color:light-dark(#17613a,#80db9c)}
+h1,h2{line-height:1.2}
+footer{margin-top:3rem;border-top:1px solid;padding-top:1rem}
+</style>
+</head>
+<body>
+<header><img src="logo.svg" alt=""><h1>Privacy</h1></header>
+<nav aria-label="Site pages">
+<a href="./">About</a>
+<a href="privacy.html" aria-current="page">Privacy</a>
+<a href="terms.html">Testing terms</a>
+</nav>
+<main>
+<p>This information describes FastMailBox's personal and development testing use. The maintainer is <a href="https://github.com/bmpitzen">bmpitzen</a>; support and privacy questions can be raised through <a href="https://github.com/bmpitzen/fastmailbox-oauth-info/issues">GitHub issues</a>. Issues are public, so do not post credentials, private mail, addresses or attachments.</p>
+<h2>Mail access and device storage</h2>
+<p>FastMailBox communicates with your selected mail provider to discover accounts and identities, synchronize mail and perform mail operations. Connecting, reconnecting or launching can begin an initial sync and process queued changes. Sending, uploading attachments and changing mailbox state communicate with the provider.</p>
+<p>The app stores its mail cache, downloaded attachments, drafts and search indexes on the device. Credentials are kept in the device Keychain and are not synchronized between devices; each device connects separately. The reader uses inert plain text and blocks remote resources. Attachments download following user action. The optional sentence model for search runs on the device and is off by default.</p>
+<h2>Optional services</h2>
+<p>A separately configured coordinator is intended to perform scheduled operations while devices are asleep. Depending on enabled features, it can receive provider credentials, scheduling and account identifiers, device/push information and opted-in shared rule metadata. Native Fastmail OAuth grants are not supported for coordinator enrollment and are not transferred to it.</p>
+<p>Assistant Access on macOS is off by default. If enabled through an owner's authenticated proxy, a connected cloud assistant can request cached mail and selected extracted attachment text. Requested content leaves the device for the proxy and assistant service. A separate toggle enables reversible triage and local draft creation; these tools cannot send mail or permanently delete it. The app does not itself call a cloud model. Review the services you choose before connecting them.</p>
+<h2>Removing access</h2>
+<p>Remove Account removes the app's local account data and credentials. It does not revoke provider-side access or erase copies already received by other services or kept in backups. Revoke each device's Fastmail OAuth grant separately in Fastmail's connected-app settings; delete its API token there if using the development token route. Optional coordinator, proxy and assistant access require separate disconnection and cleanup.</p>
+<h2>This website</h2>
+<p>This static information site is hosted on GitHub Pages. It contains no analytics, scripts or forms and uses a locally hosted logo. GitHub can process ordinary request information, such as network addresses and request logs. Loading the logo during authorization can also disclose a request's timing to the host. Provider authorization pages and optional services have their own privacy practices.</p>
+</main>
+<footer>FastMailBox · Updated <time datetime="2026-11-17">17 November 2026</time></footer>
+</body>
+</html>
